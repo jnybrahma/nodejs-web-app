@@ -1,8 +1,8 @@
-console.log('Client Side javaScript is running')
+//console.log('Client Side javaScript is running')
 
 fetch('http://puzzle.mead.io/puzzle').then((response) => {
     response.json().then((data) => {
-        console.log(data)
+        // console.log(data)
     })
 })
 
@@ -20,19 +20,19 @@ weatherForm.addEventListener('submit', (e) => {
     messageOne.textContent = 'Loading...'
     messageTwo.textContent = ''
     const location = search.value
-    console.log(location)
+        //console.log(location)
         // fetch('http://localhost:3000/weather?address=' + location).then((response) => {
     fetch('/weather?address=' + location).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 messageOne.textContent = data.error
                 messageTwo.textContent = ''
-                console.log(data.error)
+                    //console.log(data.error)
             } else {
                 messageOne.textContent = data.location
                 messageTwo.textContent = data.forecast
-                console.log(data.location)
-                console.log(data.forecast)
+                    //console.log(data.location)
+                    //console.log(data.forecast)
 
             }
 
